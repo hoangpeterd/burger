@@ -16,7 +16,7 @@ var insertOne = function(res, burgerName) {
     if (err) {
       throw err;
     }
-    res.redirected("/");
+    res.redirect("/");
   });
 };
 

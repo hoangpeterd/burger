@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>burger</title>
+  <!-- linking reset CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <!-- linking CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/burger_style.css">
+  <!-- linking bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<h1>burger</h1>
+
+	<div class="container main">
+		<div class="row">
+			<div class="col-sm-6 leftCol">
+				<ul style="list-style: none;">
+			  <!-- {{#each burgerList}}
+			    {{#if this.devoured}} -->
+						<!-- {{else}} -->
+					<li>
+
+						<span class="left notDevour">
+							<!-- {{this.burger_name}} -->
+							uneaten
+						</span>
+						<span>
+			        <form action="/?_method=PUT" method="POST">
+			          <input type="hidden" name="id" value="{{this.id}}">
+			          <button type="submit">devour!</button>
+			        </form>
+						</span>
+					<li>
+			  <!-- {{/if}} -->
+			  <!-- {{/each}} -->
+				</ul>
+			</div>
+
+
+			<div class="col-sm-6 rightCol">
+				<ul style="list-style: none;">
+				<!-- {{#each burgerList}}
+					{{#if this.devoured}} -->
+
+					<li>
+						<span>
+			        <!-- {{this.burger_name}} -->
+							eaten
+						</span>
+					</li
+			    <!-- {{/if}} -->
+			  <!-- {{/each}} -->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="submit">
+		<h2>new burger</h2>
+
+
+		<form method="POST" action="/" class="button-size">
+			<input type="text" name="burger_name">
+
+			<button type="submit">add</button>
+		</form>
+</div>
+
+</body>
+</html>
